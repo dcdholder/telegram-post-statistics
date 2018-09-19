@@ -88,6 +88,6 @@ topPostersTraceTitle = 'Top Posters by Post Volume'
 fig = tools.make_subplots(rows=2, cols=1, subplot_titles=[cumulativeTraceTitle,topPostersTraceTitle])
 fig.append_trace(cumulativeTrace, 1, 1)
 fig.append_trace(topPostersTrace, 2, 1)
-fig['layout'].update(title=title,xaxis=dict(title='Number of Posters',zeroline=False),yaxis=dict(title='Cumulative Frequency'),yaxis2=dict(title='Post Volume'),showlegend=False,titlefont={"size": 24})
+fig['layout'].update(title=title,xaxis=dict(title='Number of Posters',zeroline=False),xaxis2=dict(type='category',dtick=1),yaxis=dict(title='Cumulative Frequency'),yaxis2=dict(title='Post Volume'),showlegend=False,titlefont={"size": 24})
 
 py.plot(fig, auto_open=True)
